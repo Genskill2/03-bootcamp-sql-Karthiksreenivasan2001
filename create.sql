@@ -1,21 +1,9 @@
-CREATE TABLE publisher(
-        id integer PRIMARY KEY,
-        name text,
-        country text
-);
+PRAGMA foreign_keys = ON
 
-CREATE TABLE books(
-        id integer PRIMARY KEY,
-        title text,
-        publisher integer references publisher(id)
-);
 
-CREATE TABLE subjects(
-        id integer PRIMARY KEY,
-        name text
-);
+create table publisher (id integer  PRIMARY KEY ,name text,country text);
+create table books (id integer PRIMARY KEY  , title text ,publisher INTEGER REFERENCES publisher(id));
+create table subjects(id integer PRIMARY KEY, name text);
+create table books_subjects(book INTEGER references books(id), subject integer references subject(id));
 
-CREATE TABLE books_subjects(
-        book integer references books(id),
-        subject integer references subjects(id)
-);
+
