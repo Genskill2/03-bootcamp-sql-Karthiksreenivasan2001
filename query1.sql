@@ -1,3 +1,1 @@
-SELECT title
-FROM books
-WHERE publisher = 1;
+select title from books where publisher =(select id from publisher where name='PHI');

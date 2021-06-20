@@ -1,3 +1,1 @@
-SELECT distinct a.title 
-FROM books a, books_subjects b 
-WHERE b.book IN (SELECT b.book FROM subjects s, books_subjects b WHERE b.subject=s.id AND s.name in ("Politics","Technology")) AND b.book = a.id;
+select books.title from books where id in(select books_subjects.book from books_subjects  inner join subjects on books_subject.subject = subjects.id and (subjects.name='Technology' or subjects.name ='Politics'));
