@@ -1,0 +1,1 @@
+select books.title from books where id in(select books_subjects.book from books_subjects  inner join subjects on books_subject.subject = subjects.id and (subjects.name='Technology' or subjects.name ='Politics'));
