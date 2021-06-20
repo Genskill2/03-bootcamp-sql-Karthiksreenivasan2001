@@ -1,4 +1,8 @@
-PRAGMA foreign_keys = ON;
+drop table if exists publisher;
+drop table if exists books;
+drop table if exists subjects;
+drop table if exists books_subjects;
+
 
 
 create table publisher (id integer NOT NULL PRIMARY KEY AUTOINCREMENT ,name text,country text);
