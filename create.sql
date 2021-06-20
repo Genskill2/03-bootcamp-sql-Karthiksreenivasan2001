@@ -1,9 +1,9 @@
 PRAGMA foreign_keys = ON
 
 
-create table publisher (id integer NOT NULL PRIMARY KEY AUTOINCREMENT ,name text,country text);
-create table books (id integer NOT NULL PRIMARY KEY AUTOINCREMENT , title text NOT NULL,publisher INTEGER, FOREIGN KEY (publisher) REFERENCES publisher(id));
-create table subjects(id integer NOT NULL PRIMARY KEY AUTOINCREMENT , name text NOT NULL);
-create table books_subjects(book INTEGER NOT NULL,  subject integer NOT NULL,FOREIGN KEY (book) REFERENCES books(id), FOREIGN KEY (subject) REFERENCES subjects(id));
+create table publisher (id integer  PRIMARY KEY ,name text,country text);
+create table books (id integer PRIMARY KEY  , title text ,publisher INTEGER REFERENCES publisher(id));
+create table subjects(id integer PRIMARY KEY, name text);
+create table books_subjects(book INTEGER references books(id), subject integer references subjectS(id));
 
 
