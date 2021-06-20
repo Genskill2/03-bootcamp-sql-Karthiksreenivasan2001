@@ -37,16 +37,7 @@ insert into books_subjects (book,subject) values (select 'Atomic Habits',id from
 insert into books_subjects (book,subject) values (select 'The City and The City',id from publisher where name ='Del Rey';
 insert into books_subjects (book,subject) values (select 'The Great War for Civilisation',id from publisher where name ='Vintage';
 
-| Book name                        | Publisher | Subjects                    |
-|----------------------------------|-----------|-----------------------------|
-| The C Programming Language       | PHI       | C, UNIX, Technology         |
-| The Go Programming Language      | PHI       | Go, Technology              |
-| The UNIX Programming Environment | PHI       | UNIX, Technology            |
-| Cryptonomicon                    | Harper    | Technology, Science Fiction |
-| Deep Work                        | GCP       | Technology, Productivity    |
-| Atomic Habits                    | Avery     | Productivity, Psychology    |
-| The City and The City            | Del Rey   | Science Fiction, Politics   |
-| The Great War for Civilisation   | Vintage   | Politics, History           |
+
 
 insert into books_subjects (book,subject) select (select id from books where id =1) as book, (select id from subjects where id =1);
 insert into books_subjects (book,subject) select (select id from books where id =1) as book, (select id from subjects where id =2);
@@ -64,7 +55,7 @@ insert into books_subjects (book,subject) select (select id from books where id 
 insert into books_subjects (book,subject) select (select id from books where id =7) as book, (select id from subjects where id =5);
 insert into books_subjects (book,subject) select (select id from books where id =7) as book, (select id from subjects where id =8);
 insert into books_subjects (book,subject) select (select id from books where id =8) as book, (select id from subjects where id =8);
-insert into books_subjects (book,subject) select (select id from books where id =8) as book, (select id from subjects where id =9);
+insert into books_subjects (book,subject) select (select id from books where id =) as book, (select id from subjects where id =9);
 
 
 
