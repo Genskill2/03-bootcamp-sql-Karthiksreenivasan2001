@@ -1,3 +1,1 @@
-update publisher set name ='Prentice Hall' where publisher.name = 'PHI';
---update.sql
-
+update publisher set name = "Prentice Hall" where id=1;
